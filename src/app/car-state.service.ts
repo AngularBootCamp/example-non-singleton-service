@@ -4,10 +4,10 @@
 import { BehaviorSubject } from 'rxjs';
 
 export class CarState {
-  nAxles: number;
-  wheelQtys: number[];
-  ok: boolean;
-  message: string;
+  nAxles = 0;
+  wheelQtys: number[] = [];
+  ok = true;
+  message = '';
 }
 
 function calculateValidity(state: CarState) {
@@ -41,7 +41,7 @@ function calculateValidity(state: CarState) {
   }
 }
 
-export const WHEEL_TYPES = [
+export const wheelTypes = [
   'Wide Slicks',
   'Cheap Trailer',
   'Skinny',
@@ -61,7 +61,7 @@ export class CarStateService {
   constructor() {
     const state = new CarState();
     state.nAxles = 0;
-    state.wheelQtys = Array(WHEEL_TYPES.length).fill(0);
+    state.wheelQtys = Array(wheelTypes.length).fill(0);
     calculateValidity(state);
     this.state = new BehaviorSubject<CarState>(state);
   }
