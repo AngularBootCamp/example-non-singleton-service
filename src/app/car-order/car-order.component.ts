@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {CarStateService} from '../car-state.service';
+import { CarStateService } from '../car-state.service';
 
 @Component({
   selector: 'car-order',
@@ -8,4 +8,4 @@ import {CarStateService} from '../car-state.service';
   styleUrls: ['./car-order.component.css'],
   providers: [CarStateService]
 })
-export class CarOrderComponent { }
+export class CarOrderComponent {}

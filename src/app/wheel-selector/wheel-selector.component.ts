@@ -14,14 +14,19 @@ interface ITypeQty {
   templateUrl: './wheel-selector.component.html'
 })
 export class WheelSelectorComponent {
-
   typesAndQtys: Observable<ITypeQty[]>;
 
   constructor(private carStateService: CarStateService) {
     // If you need to combine synchronous and asynchronous data
     // in the template, do it in the typescript
-    this.typesAndQtys = this.carStateService.state.pipe(map(carState =>
-      carState.wheelQtys.map((q, index) => ({ wt: wheelTypes[index], q }))));
+    this.typesAndQtys = this.carStateService.state.pipe(
+      map(carState =>
+        carState.wheelQtys.map((q, index) => ({
+          wt: wheelTypes[index],
+          q
+        }))
+      )
+    );
   }
 
   more(i: number) {
@@ -31,5 +36,4 @@ export class WheelSelectorComponent {
   less(i: number) {
     this.carStateService.changeWheelQty(i, -1);
   }
-
 }

@@ -20,7 +20,10 @@ function calculateValidity(state: CarState) {
     return;
   }
 
-  const totalWheels = state.wheelQtys.reduce((prev, q) => prev + q, 0);
+  const totalWheels = state.wheelQtys.reduce(
+    (prev, q) => prev + q,
+    0
+  );
   if (totalWheels === 0) {
     state.ok = false;
     state.message = 'must have at least one wheel';
@@ -33,7 +36,10 @@ function calculateValidity(state: CarState) {
     return;
   }
 
-  const oddWheels = state.wheelQtys.reduce((prev, q) => prev + (q % 2), 0);
+  const oddWheels = state.wheelQtys.reduce(
+    (prev, q) => prev + (q % 2),
+    0
+  );
   if (oddWheels !== 0) {
     state.ok = false;
     state.message = 'all wheels must be used in pairs';
@@ -55,7 +61,6 @@ export const wheelTypes = [
 // @Injectable()
 
 export class CarStateService {
-
   state: BehaviorSubject<CarState>;
 
   constructor() {
@@ -67,15 +72,17 @@ export class CarStateService {
   }
 
   changeAxles(delta: number) {
-    this.updateState(s => s.nAxles = Math.max(s.nAxles + delta, 0));
+    this.updateState(s => (s.nAxles = Math.max(s.nAxles + delta, 0)));
   }
 
   changeWheelQty(i: number, delta: number) {
-    this.updateState(s => s.wheelQtys[i] = Math.max(s.wheelQtys[i] + delta, 0));
+    this.updateState(
+      s => (s.wheelQtys[i] = Math.max(s.wheelQtys[i] + delta, 0))
+    );
   }
 
   private updateState(f: (x: CarState) => void) {
-    let newState: CarState = Object.assign({}, this.state.getValue());
+    const newState: CarState = { ...this.state.getValue() };
     f(newState);
     calculateValidity(newState);
     this.state.next(newState);

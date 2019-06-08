@@ -18,4 +18,4 @@ import { WheelSelectorComponent } from './wheel-selector/wheel-selector.componen
   imports: [BrowserModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
