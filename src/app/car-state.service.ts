@@ -1,8 +1,10 @@
 // Here is the essential shape of the state of this example
 // system, including the "business rules".
 
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+@Injectable()
 export class CarState {
   nAxles = 0;
   wheelQtys: number[] = [];
@@ -60,6 +62,7 @@ export const wheelTypes = [
 // at the imports.
 // @Injectable()
 
+@Injectable()
 export class CarStateService {
   state: BehaviorSubject<CarState>;
 
