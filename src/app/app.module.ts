@@ -10,10 +10,10 @@ import { WheelSelectorComponent } from './wheel-selector/wheel-selector.componen
 @NgModule({
   declarations: [
     AppComponent,
-    CarOrderComponent,
     AxleSelectorComponent,
-    WheelSelectorComponent,
-    ValidityDisplayComponent
+    CarOrderComponent,
+    ValidityDisplayComponent,
+    WheelSelectorComponent
   ],
   imports: [BrowserModule],
   bootstrap: [AppComponent]
