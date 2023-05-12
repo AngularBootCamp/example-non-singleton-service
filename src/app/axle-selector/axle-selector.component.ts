@@ -4,7 +4,7 @@ import { Observable, map } from 'rxjs';
 import { CarStateService } from '../car-state.service';
 
 @Component({
-  selector: 'axle-selector',
+  selector: 'app-axle-selector',
   templateUrl: './axle-selector.component.html'
 })
 export class AxleSelectorComponent {

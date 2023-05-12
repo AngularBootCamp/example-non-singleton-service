@@ -1,1 +1,3 @@
-<div [class.red]="(ok | async) === false">{{ message | async }}</div>
+<div [class.invalid]="(ok | async) === false">
+  {{ message | async }}
+</div>

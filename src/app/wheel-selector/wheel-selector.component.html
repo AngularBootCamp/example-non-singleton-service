@@ -9,7 +9,7 @@ Wheels:
   <tr *ngFor="let wt of typesAndQtys | async; index as i">
     <td>{{ wt.wt }}</td>
     <td>{{ wt.q }}</td>
-    <td>
+    <td class="controls">
       <button (click)="more(i)">+</button>
       <button (click)="less(i)">-</button>
     </td>

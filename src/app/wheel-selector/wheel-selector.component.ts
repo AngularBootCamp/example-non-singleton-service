@@ -9,8 +9,9 @@ interface ITypeQty {
 }
 
 @Component({
-  selector: 'wheel-selector',
-  templateUrl: './wheel-selector.component.html'
+  selector: 'app-wheel-selector',
+  templateUrl: './wheel-selector.component.html',
+  styleUrls: ['./wheel-selector.component.scss']
 })
 export class WheelSelectorComponent {
   typesAndQtys: Observable<ITypeQty[]>;

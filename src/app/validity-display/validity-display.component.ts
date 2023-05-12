@@ -4,9 +4,9 @@ import { Observable, map } from 'rxjs';
 import { CarStateService } from '../car-state.service';
 
 @Component({
-  selector: 'validity-display',
+  selector: 'app-validity-display',
   templateUrl: './validity-display.component.html',
-  styleUrls: ['./validity-display.component.css']
+  styleUrls: ['./validity-display.component.scss']
 })
 export class ValidityDisplayComponent {
   ok: Observable<boolean>;
