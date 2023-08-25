@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
   // ,providers: [CarStateService]
 })
 export class AppComponent {
-  cars: any[] = [];
+  cars: number[] = [];
 
   addOne() {
-    this.cars.push({});
+    this.cars.push(this.cars.length + 1);
   }
 }
