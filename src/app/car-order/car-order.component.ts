@@ -8,7 +8,7 @@ import { WheelSelectorComponent } from '../wheel-selector/wheel-selector.compone
 @Component({
   selector: 'app-car-order',
   templateUrl: './car-order.component.html',
-  styleUrls: ['./car-order.component.scss'],
+  styleUrl: './car-order.component.scss',
   providers: [CarStateService],
   standalone: true,
   imports: [

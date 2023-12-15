@@ -7,7 +7,7 @@ import { CarStateService } from '../car-state.service';
 @Component({
   selector: 'app-validity-display',
   templateUrl: './validity-display.component.html',
-  styleUrls: ['./validity-display.component.scss'],
+  styleUrl: './validity-display.component.scss',
   standalone: true,
   imports: [AsyncPipe]
 })

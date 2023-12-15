@@ -12,7 +12,7 @@ interface ITypeQty {
 @Component({
   selector: 'app-wheel-selector',
   templateUrl: './wheel-selector.component.html',
-  styleUrls: ['./wheel-selector.component.scss'],
+  styleUrl: './wheel-selector.component.scss',
   standalone: true,
   imports: [NgFor, AsyncPipe]
 })
