@@ -3,5 +3,7 @@
 <button (click)="addOne()">Add another car</button>
 
 <div class="car-orders">
-  <app-car-order *ngFor="let c of cars" />
+  @for (c of cars; track c) {
+    <app-car-order />
+  }
 </div>

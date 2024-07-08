@@ -1,4 +1,4 @@
-import { NgFor, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Observable, map } from 'rxjs';
 
@@ -14,7 +14,7 @@ interface ITypeQty {
   templateUrl: './wheel-selector.component.html',
   styleUrl: './wheel-selector.component.scss',
   standalone: true,
-  imports: [NgFor, AsyncPipe]
+  imports: [AsyncPipe]
 })
 export class WheelSelectorComponent {
   typesAndQtys: Observable<ITypeQty[]>;

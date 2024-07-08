@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { CarOrderComponent } from './car-order/car-order.component';
@@ -11,7 +10,7 @@ import { CarOrderComponent } from './car-order/car-order.component';
   styleUrl: './app.component.scss',
   // ,providers: [CarStateService]
   standalone: true,
-  imports: [NgFor, CarOrderComponent]
+  imports: [CarOrderComponent]
 })
 export class AppComponent {
   cars: number[] = [];
